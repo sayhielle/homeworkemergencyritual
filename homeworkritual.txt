@@ -17,7 +17,7 @@
             padding:18px;
             border:2px solid #b85cff;
             border-radius:6px;
-        }
+       }
 
         h2{
             color:#ffb3ff;
@@ -117,7 +117,7 @@ function summon(){
             object3 == "a fresh cookie, still warm and all.")
     {
         result.innerHTML =
-        "The demon appears! It seems way more interested in the cookie than helping with your homework.";
+        "The demon appears! They look at you, and say 'You brought me a cookie? That's kind of cute.' Unfortunately, they seem far more interested in flirting than helping you with algebra.";
     }
 
     else{
