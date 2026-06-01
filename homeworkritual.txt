@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework Emergency Ritual</title>
+
+    <style>
+        body{
+            background:#1c1020;
+            color:white;
+            font-family:Georgia;
+            margin:35px;
+        }
+
+        .box{
+            background:#2b1830;
+            width:420px;
+            padding:18px;
+            border:2px solid #b85cff;
+            border-radius:6px;
+        }
+
+        h2{
+            color:#ffb3ff;
+            margin-bottom:5px;
+        }
+
+        p{
+            margin-bottom:8px;
+        }
+
+        select{
+            margin:4px;
+            padding:4px;
+        }
+
+        button{
+            margin-top:10px;
+            padding:6px 10px;
+            background:#ffb3ff;
+            border:none;
+            cursor:pointer;
+        }
+
+        #result{
+            margin-top:15px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Homework Emergency Ritual</h2>
+
+    <p>You have made the completely reasonable decision to summon a demon instead of doing the work yourself.</p>
+
+    <p>Choose 3 ritual items.</p>
+
+    <p>Object 1:</p>
+    <select id="object1">
+        <option>an old candle that has seen better days.</option>
+        <option>your favorite pen (we all have one)</option>
+        <option>a sock that should probably be in the washer</option>
+        <option>a fresh cookie, still warm and all.</option>
+        <option>the math book you're avoiding</option>
+    </select>
+
+    <p>Object 2:</p>
+    <select id="object2">
+        <option>an old candle that has seen better days.</option>
+        <option>your favorite pen (we all have one)</option>
+        <option>a sock that should probably be in the washer</option>
+        <option>a fresh cookie, still warm and all.</option>
+        <option>the math book you're avoiding</option>
+    </select>
+
+    <p>Object 3:</p>
+    <select id="object3">
+        <option>an old candle that has seen better days.</option>
+        <option>your favorite pen (we all have one)</option>
+        <option>a sock that should probably be in the washer</option>
+        <option>a fresh cookie, still warm and all.</option>
+        <option>the math book you're avoiding</option>
+    </select>
+
+    <br>
+
+    <button onclick="summon()">Summon</button>
+    <button onclick="resetGame()">Try Again</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+function summon(){
+
+    let object1 = document.getElementById("object1").value;
+    let object2 = document.getElementById("object2").value;
+    let object3 = document.getElementById("object3").value;
+
+    let result = document.getElementById("result");
+
+    if(object1 == "an old candle that has seen better days." &&
+       object2 == "your favorite pen (we all have one)" &&
+       object3 == "the math book you're avoiding")
+    {
+        result.innerHTML =
+        "A demon appears! It's a tiny one and kind of cute. It does your homework but the handwriting is really bad.";
+    }
+
+    else if(object1 == "a fresh cookie, still warm and all." ||
+            object2 == "a fresh cookie, still warm and all." ||
+            object3 == "a fresh cookie, still warm and all.")
+    {
+        result.innerHTML =
+        "The demon appears! It seems way more interested in the cookie than helping with your homework.";
+    }
+
+    else{
+        result.innerHTML =
+        "Nothing happens. Now your room smells weird and you still have homework to do.";
+    }
+}
+
+function resetGame(){
+
+    document.getElementById("object1").selectedIndex = 0;
+    document.getElementById("object2").selectedIndex = 0;
+    document.getElementById("object3").selectedIndex = 0;
+
+    document.getElementById("result").innerHTML = "";
+}
+
+</script>
+
+</body>
+</html>
